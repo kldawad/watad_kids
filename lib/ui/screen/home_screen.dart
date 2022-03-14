@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:watad_kids/controller/home_controller.dart';
+import 'package:watad_kids/ui/screen/drawe_menu.dart';
+import 'package:watad_kids/ui/screen/stories_screen.dart';
 import 'package:watad_kids/ui/widgets/slider_indicator.dart';
-import 'package:watad_kids/utils/theme/colors.dart';
 
 class HomeScreen extends StatelessWidget {
   HomeScreen({Key? key}) : super(key: key);
@@ -15,21 +17,10 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-      ),
+      drawer: DrawerMenu(),
       appBar: AppBar(
-        // elevation: 0,
-        // backgroundColor: Colors.transparent,
-        actions: [
-          IconButton(
-            onPressed: () {},
-            icon: Icon(
-              Icons.favorite,
-              color: kThemeOrange,
-            ),
-          ),
-        ],
+        elevation: 0,
+        backgroundColor: Colors.transparent,
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -90,7 +81,7 @@ class HomeScreen extends StatelessWidget {
             ListView.separated(
               shrinkWrap: true,
               physics: NeverScrollableScrollPhysics(),
-              itemCount: HomeController.to.menuImages.length,
+              itemCount: HomeController.to.myMenu.length,
               separatorBuilder: (BuildContext context, int index) => const Divider(
                 indent: 10,
                 endIndent: 10,
@@ -98,13 +89,21 @@ class HomeScreen extends StatelessWidget {
               ),
               itemBuilder: (BuildContext context, int index) {
                 return ListTile(
-                  onTap: () {},
+                  onTap: () {
+                    if (index == 0) {
+                      Get.to(
+                        () => StoriesScreen(
+                          title: HomeController.to.myMenu[index]["Title"]!,
+                        ),
+                      );
+                    }
+                  },
                   leading: Image.asset(
-                    HomeController.to.menuImages[index],
+                    HomeController.to.myMenu[index]["leading"]!,
                     width: 100,
                   ),
                   title: Text(
-                    "Title",
+                    HomeController.to.myMenu[index]["Title"]!,
                     style: TextStyle(color: Colors.white),
                   ),
                   subtitle: Text(

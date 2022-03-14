@@ -10,3 +10,8 @@ final kRegistrationButton = ButtonStyle(
     EdgeInsets.symmetric(horizontal: 50, vertical: 15),
   ),
 );
+
+final kLogOut = ButtonStyle(
+  shape: MaterialStateProperty.all<RoundedRectangleBorder>(RoundedRectangleBorder(side: BorderSide.none)),
+  backgroundColor: MaterialStateProperty.all(Color(0xFFff9e00)),
+);

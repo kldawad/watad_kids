@@ -8,4 +8,22 @@ class HomeController extends GetxController {
     "assets/b.png",
     "assets/c.png",
   ].obs;
+
+  final myMenu = [
+    {
+      "leading": "assets/aa.png",
+      "Title": "Most Recent Stories",
+      "subTitle": "subTitle1",
+    },
+    {
+      "leading": "assets/b.png",
+      "Title": "Most Liked Stories",
+      "subTitle": "subTitle2",
+    },
+    {
+      "leading": "assets/c.png",
+      "Title": "Most Popular Stories",
+      "subTitle": "subTitle3",
+    }
+  ].obs;
 }

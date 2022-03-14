@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:watad_kids/utils/style/button_style.dart';
+import 'package:watad_kids/ui/widgets/custom_elevated_button.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({Key? key}) : super(key: key);
@@ -7,7 +7,6 @@ class WelcomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF240046),
       body: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -18,25 +17,22 @@ class WelcomeScreen extends StatelessWidget {
               children: [
                 Column(
                   children: [
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 8),
-                      child: Text(
-                        "\nHappy\nLearning\n",
-                        style: Theme.of(context).textTheme.headlineLarge!.copyWith(color: Colors.white),
-                      ),
+                    Text(
+                      "\n Happy\n Learning\n",
+                      style: Theme.of(context).textTheme.headlineLarge!.copyWith(color: Colors.white),
                     ),
-                    ElevatedButton(
-                      style: kRegistrationButton,
+                    CustomElevatedButton(
+                      buttonText: "Sign in",
+                      width: 150,
                       onPressed: () {},
-                      child: Text("Sign in"),
                     ),
                     SizedBox(
                       height: 10,
                     ),
-                    ElevatedButton(
-                      style: kRegistrationButton,
+                    CustomElevatedButton(
+                      buttonText: "Sign up",
+                      width: 150,
                       onPressed: () {},
-                      child: Text("Sign up"),
                     ),
                   ],
                 ),
