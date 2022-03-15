@@ -11,7 +11,12 @@ const kLightOrange = Color(0xFFff9e00);
 class AppThemeData {
   ThemeData get materialTheme {
     return ThemeData(
+      dividerColor: Colors.grey,
       fontFamily: "Cabin",
+      listTileTheme: ListTileThemeData(
+        iconColor: Colors.white70,
+        // textColor: Colors.white,
+      ),
       drawerTheme: DrawerThemeData(
         backgroundColor: Color(0xFF5a189a),
       ),
@@ -23,7 +28,12 @@ class AppThemeData {
       ),
       textTheme: TextTheme(
         bodyText2: TextStyle(color: Colors.white),
+        bodyText1: TextStyle(color: Colors.white),
         headline6: TextStyle(color: Colors.white),
+        subtitle1: TextStyle(color: Colors.white),
+        subtitle2: TextStyle(color: Colors.white),
+        headline5: TextStyle(color: Colors.white),
+        headlineLarge: TextStyle(color: Colors.white),
       ),
     );
   }

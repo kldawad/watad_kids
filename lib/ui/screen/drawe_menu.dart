@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:watad_kids/ui/screen/welcome_screen.dart';
 import 'package:watad_kids/utils/style/button_style.dart';
-import 'package:watad_kids/utils/style/text_style.dart';
 
 class DrawerMenu extends StatefulWidget {
   const DrawerMenu({Key? key}) : super(key: key);
@@ -58,27 +58,26 @@ class _DrawerMenuState extends State<DrawerMenu> {
             onTap: () {},
             leading: Icon(
               Icons.favorite,
-              color: Colors.white,
+              color: Colors.white70,
             ),
             title: Text(
               'Favorite',
-              style: kDefaultWhite,
             ),
           ),
           ListTile(
             onTap: () {},
             leading: Icon(
               Icons.credit_card,
-              color: Colors.white,
             ),
             title: Text(
               'Subscribe',
-              style: kDefaultWhite,
             ),
           ),
           Spacer(),
           ElevatedButton.icon(
-            onPressed: () {},
+            onPressed: () {
+              Get.to(() => WelcomeScreen());
+            },
             label: Text("Logout".tr),
             icon: Icon(Icons.logout),
             style: kLogOut,

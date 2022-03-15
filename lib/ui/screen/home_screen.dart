@@ -17,11 +17,14 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+      ),
       drawer: DrawerMenu(),
       appBar: AppBar(
-        elevation: 0,
-        backgroundColor: Colors.transparent,
-      ),
+          // elevation: 0,
+          // backgroundColor: Colors.transparent,
+          ),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -37,16 +40,12 @@ class HomeScreen extends StatelessWidget {
                   Text(
                     "Watad Kids",
                     style: Theme.of(context).textTheme.headlineLarge!.copyWith(
-                          color: Colors.white,
                           fontWeight: FontWeight.bold,
                         ),
                   ),
                   Text(
                     "Kids Stories to have fun!",
-                    style: Theme.of(context).textTheme.headlineSmall!.copyWith(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                        ),
+                    style: Theme.of(context).textTheme.headline6,
                   ),
                 ],
               ),
@@ -85,7 +84,6 @@ class HomeScreen extends StatelessWidget {
               separatorBuilder: (BuildContext context, int index) => const Divider(
                 indent: 10,
                 endIndent: 10,
-                color: Colors.grey,
               ),
               itemBuilder: (BuildContext context, int index) {
                 return ListTile(
@@ -104,15 +102,12 @@ class HomeScreen extends StatelessWidget {
                   ),
                   title: Text(
                     HomeController.to.myMenu[index]["Title"]!,
-                    style: TextStyle(color: Colors.white),
                   ),
                   subtitle: Text(
                     "Subtitle",
-                    style: TextStyle(color: Colors.grey),
                   ),
                   trailing: Icon(
                     Icons.chevron_right,
-                    color: Colors.white,
                   ),
                 );
               },
