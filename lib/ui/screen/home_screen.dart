@@ -7,6 +7,7 @@ import 'package:watad_kids/ui/widgets/slider_indicator.dart';
 
 class HomeScreen extends StatelessWidget {
   HomeScreen({Key? key}) : super(key: key);
+  final controller = Get.lazyPut(() => HomeController());
 
   final imageUrl = [
     "https://www.redbytes.in/wp-content/uploads/2016/07/15-Best-Free-Reading-Apps-For-Kids.jpg",

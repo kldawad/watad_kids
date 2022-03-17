@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:watad_kids/ui/screen/home_screen.dart';
-import 'package:watad_kids/ui/screen/registration_screen/sign_up_screen.dart';
 import 'package:watad_kids/ui/widgets/custom_elevated_button.dart';
 
 class WelcomeScreen extends StatelessWidget {
@@ -37,9 +36,7 @@ class WelcomeScreen extends StatelessWidget {
                     CustomElevatedButton(
                       buttonText: "Sign up",
                       width: 150,
-                      onPressed: () {
-                        Get.to(() => SignUpScreen());
-                      },
+                      onPressed: () {},
                     ),
                   ],
                 ),

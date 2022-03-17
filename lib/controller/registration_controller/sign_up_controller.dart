@@ -9,6 +9,7 @@ class SignUpController extends GetxController {
   final formKey = GlobalKey<FormState>();
   final myFocusNodes = <FocusNode>[].obs;
   final myTextEditingControllers = <TextEditingController>[].obs;
+  final counter = 0.obs;
 
   void unFocusFields() {
     for (var element in myFocusNodes) {
@@ -21,7 +22,6 @@ class SignUpController extends GetxController {
 
   final registrationFields = [
     "Name",
-    "Career",
     "Email",
     "Password",
     "Confirm password",
@@ -30,6 +30,7 @@ class SignUpController extends GetxController {
   @override
   void onInit() {
     myFocusNodes.value = List.generate(5, (index) => FocusNode());
+    ever(counter, (value) => print("HELLO"));
     myTextEditingControllers.value = List.generate(5, (index) => TextEditingController());
     super.onInit();
   }

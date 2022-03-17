@@ -33,6 +33,7 @@ class AppThemeData {
         subtitle1: TextStyle(color: Colors.white),
         subtitle2: TextStyle(color: Colors.white),
         headline5: TextStyle(color: Colors.white),
+        headline4: TextStyle(color: Colors.white),
         headlineLarge: TextStyle(color: Colors.white),
       ),
     );
